@@ -23,11 +23,13 @@ Step 1: Create an EC2 Instance with User Data
    # Create a simple HTML page that displays the current time
    echo "<html><body><h1>Current Time</h1><p>The current time is: $(date)</p></body></html>" > /var/www/html/index.html
    ```
+![preview](3.png)
 
 4. **Configure Security Group:**
    - Allow inbound traffic on port `80` (HTTP) and `22` (SSH).
-   
-![preview](3.png)
+   ![preview](4.png)
+
+
 
 5. **Review and Launch:**
    - Review your configurations and click "Launch."
@@ -42,7 +44,7 @@ Step 2: Access Your Application
    - Navigate to `http://your-instance-public-ip`.
    - You should see a webpage displaying the current time.
 
-![preview](4.png)
+![preview](5.png)
 
 Step 3: Verify the User Data Execution
 
@@ -55,12 +57,11 @@ Step 3: Verify the User Data Execution
    ```bash
    sudo systemctl status httpd
    ```
-![preview](5.png)
+![preview](6.png)
 3. **Verify the HTML File:**
    ```bash
    cat /var/www/html/index.html
    ```
-![preview](6.png)
 Conclusion
 
 You've successfully created a simple web application that utilizes AWS User Data to automatically 
